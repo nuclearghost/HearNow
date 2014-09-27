@@ -21,24 +21,21 @@ class HomeViewController: UITableViewController, UITextFieldDelegate, SongkickAP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        api.delegate = self;
+        LocationSearchField.delegate = self
+        
+        api.delegate = self
         api.pingSongkick()
     }
 
     
     func textFieldDidEndEditing(textField: UITextField) {
-        println("Text field done. Text \(self.LocationSearchField.text)")
+        println("Text field did end. Text \(self.LocationSearchField.text)")
+        self.LocationSearchField.resignFirstResponder()
     }
-    
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        println("Text field done. Text \(self.LocationSearchField.text)")
-        return true
-    }
-    
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        println("Text field done. Text \(self.LocationSearchField.text)")
+        self.LocationSearchField.resignFirstResponder()
         return true
     }
     

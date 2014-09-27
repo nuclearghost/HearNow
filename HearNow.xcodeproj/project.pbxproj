@@ -14,6 +14,7 @@
 		F3BCBF4C19D73EA3002F0A58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BCBF4B19D73EA3002F0A58 /* Images.xcassets */; };
 		F3BCBF4F19D73EA3002F0A58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BCBF4D19D73EA3002F0A58 /* LaunchScreen.xib */; };
 		F3BCBF5B19D73EA3002F0A58 /* HearNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCBF5A19D73EA3002F0A58 /* HearNowTests.swift */; };
+		F3BCBF6519D74331002F0A58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCBF6419D74331002F0A58 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		F3BCBF5419D73EA3002F0A58 /* HearNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HearNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BCBF5919D73EA3002F0A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3BCBF5A19D73EA3002F0A58 /* HearNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearNowTests.swift; sourceTree = "<group>"; };
+		F3BCBF6419D74331002F0A58 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				F3BCBF4419D73EA3002F0A58 /* AppDelegate.swift */,
 				F3BCBF4619D73EA3002F0A58 /* ViewController.swift */,
 				F3BCBF4819D73EA3002F0A58 /* Main.storyboard */,
+				F3BCBF6419D74331002F0A58 /* HomeViewController.swift */,
 				F3BCBF4B19D73EA3002F0A58 /* Images.xcassets */,
 				F3BCBF4D19D73EA3002F0A58 /* LaunchScreen.xib */,
 				F3BCBF4219D73EA3002F0A58 /* Supporting Files */,
@@ -218,6 +221,7 @@
 				F3BCBF4719D73EA3002F0A58 /* ViewController.swift in Sources */,
 				F3BCBF4519D73EA3002F0A58 /* AppDelegate.swift in Sources */,
 				94F8556019D7424200595CF6 /* SongkickAPI.swift in Sources */,
+				F3BCBF6519D74331002F0A58 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

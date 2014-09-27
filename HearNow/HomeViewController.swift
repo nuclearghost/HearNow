@@ -21,4 +21,13 @@ class HomeViewController: UITableViewController, UITextFieldDelegate {
         println("Text field done. Text \(self.LocationSearchField.text)")
     }
     
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        println("Text field done. Text \(self.LocationSearchField.text)")
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        println("Text field done. Text \(self.LocationSearchField.text)")
+        return true
+    }
 }

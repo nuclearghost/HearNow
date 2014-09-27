@@ -12,7 +12,7 @@ import UIKit
 class HomeViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, SongkickAPIProtocol {
     
     var api: SongkickAPI = SongkickAPI()
-    var concerts: NSDictionary = NSDictionary()
+    var concerts: NSArray = NSArray()
 
     @IBOutlet weak var LocationSearchField: UITextField!
 
@@ -23,6 +23,9 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = self.UIColorFromRGB(0x26D0CE)
+        self.navigationController?.navigationBar.tintColor = self.UIColorFromRGB(0x1A2980)
+        
         LocationSearchField.delegate = self
         
         api.delegate = self
@@ -30,22 +33,21 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        return self.concerts.count;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: ConcertCell! = self.tableView.dequeueReusableCellWithIdentifier("ConcertCell" ,forIndexPath: indexPath) as ConcertCell
         
+        let rowData = self.concerts[indexPath.row] as NSDictionary
+        cell.artistLabel.text = rowData["displayName"] as NSString
+        
+        let start = rowData["start"] as NSDictionary
+        cell.dateLabel.text = start["date"] as NSString
+        
+        let venue = rowData["venue"] as NSDictionary
+        cell.venueLabel.text = venue["displayName"] as NSString
         /*
-        rowData = dataArray[indexPath.row] as NSDictionary
-        var title=rowData["title"] as String
-        var subtitle=rowData["subtitle"] as String
-        var image=rowData["thumb"] as String
-        
-        cell.miaImmagine.alpha=0.0
-        cell.mioTesto.alpha=0.0
-        cell.mioSubtitle.alpha=0.0
-        
         var imageUrl = NSURL(string: image)
         var request = NSURLRequest(URL: imageUrl)
         var requestQueue : NSOperationQueue = NSOperationQueue()
@@ -103,6 +105,20 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     
     //mark SongkickAPI delegate
     func didRecieveResponse(results: NSDictionary) {
-        println(results)
+        //println(results)
+        let resultsPage = results["resultsPage"] as NSDictionary
+        let resultsD = resultsPage["results"] as NSDictionary
+        let events = resultsD["event"] as NSArray
+        self.concerts = events;
+        tableView.reloadData()
+    }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }

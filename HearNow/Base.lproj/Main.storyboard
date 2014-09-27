@@ -9,18 +9,18 @@
         <scene sceneID="QwE-xk-gfl">
             <objects>
                 <tableViewController id="YHt-Fq-K66" customClass="HomeViewController" customModule="HearNow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="22" sectionFooterHeight="22" id="PkT-rg-eNJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="141" sectionHeaderHeight="22" sectionFooterHeight="22" id="PkT-rg-eNJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConcertCell" rowHeight="140" id="0vo-dh-2iY" customClass="ConcertCell" customModule="HearNow" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConcertCell" rowHeight="200" id="0vo-dh-2iY" customClass="ConcertCell" customModule="HearNow" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0vo-dh-2iY" id="p01-Zr-GZI">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-ut-yGR">
-                                            <rect key="frame" x="8" y="10" width="584" height="33"/>
+                                            <rect key="frame" x="8" y="11" width="584" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -43,8 +43,25 @@
                                         <constraint firstItem="5BQ-ut-yGR" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="CIv-Qb-azS"/>
                                         <constraint firstItem="d1G-a2-eB0" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="h1N-1N-xNc"/>
                                         <constraint firstItem="GdR-ZL-1F6" firstAttribute="leading" secondItem="p01-Zr-GZI" secondAttribute="leadingMargin" id="idm-Fe-qJJ"/>
+                                        <constraint firstItem="GdR-ZL-1F6" firstAttribute="bottom" secondItem="p01-Zr-GZI" secondAttribute="bottomMargin" id="k4L-D4-ObH"/>
+                                        <constraint firstItem="d1G-a2-eB0" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="oTB-a2-9Zn"/>
                                         <constraint firstItem="5BQ-ut-yGR" firstAttribute="leading" secondItem="p01-Zr-GZI" secondAttribute="leadingMargin" id="tUI-9B-6Ss"/>
+                                        <constraint firstItem="d1G-a2-eB0" firstAttribute="bottom" secondItem="p01-Zr-GZI" secondAttribute="bottomMargin" id="vjB-u8-e3U"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="k4L-D4-ObH"/>
+                                            <exclude reference="oTB-a2-9Zn"/>
+                                            <exclude reference="vjB-u8-e3U"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="k4L-D4-ObH"/>
+                                            <include reference="oTB-a2-9Zn"/>
+                                            <include reference="vjB-u8-e3U"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="artistLabel" destination="5BQ-ut-yGR" id="D1c-Ak-3qI"/>

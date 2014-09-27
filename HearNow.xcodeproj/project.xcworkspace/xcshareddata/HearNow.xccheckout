@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AF409C61-8533-4EC1-9E4B-7FD31D3BBD53</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HearNow</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7B89A1A5D07BD4BDAF268A7B8ADC89E0AE20FC1E</key>
+		<string>github.com:nuclearghost/HearNow.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HearNow.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7B89A1A5D07BD4BDAF268A7B8ADC89E0AE20FC1E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:nuclearghost/HearNow.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7B89A1A5D07BD4BDAF268A7B8ADC89E0AE20FC1E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7B89A1A5D07BD4BDAF268A7B8ADC89E0AE20FC1E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HearNow</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94F8556019D7424200595CF6 /* SongkickAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8555F19D7424200595CF6 /* SongkickAPI.swift */; };
 		F3BCBF4519D73EA3002F0A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCBF4419D73EA3002F0A58 /* AppDelegate.swift */; };
 		F3BCBF4719D73EA3002F0A58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCBF4619D73EA3002F0A58 /* ViewController.swift */; };
 		F3BCBF4A19D73EA3002F0A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BCBF4819D73EA3002F0A58 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94F8555F19D7424200595CF6 /* SongkickAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongkickAPI.swift; sourceTree = "<group>"; };
 		F3BCBF3F19D73EA3002F0A58 /* HearNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HearNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BCBF4319D73EA3002F0A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3BCBF4419D73EA3002F0A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				F3BCBF4B19D73EA3002F0A58 /* Images.xcassets */,
 				F3BCBF4D19D73EA3002F0A58 /* LaunchScreen.xib */,
 				F3BCBF4219D73EA3002F0A58 /* Supporting Files */,
+				94F8555F19D7424200595CF6 /* SongkickAPI.swift */,
 			);
 			path = HearNow;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				F3BCBF4719D73EA3002F0A58 /* ViewController.swift in Sources */,
 				F3BCBF4519D73EA3002F0A58 /* AppDelegate.swift in Sources */,
+				94F8556019D7424200595CF6 /* SongkickAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				F3BCBF6019D73EA3002F0A58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3BCBF6119D73EA3002F0A58 /* Build configuration list for PBXNativeTarget "HearNowTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				F3BCBF6319D73EA3002F0A58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

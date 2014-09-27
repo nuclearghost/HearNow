@@ -30,6 +30,16 @@ class SongkickAPI: NSObject {
         getMetroID(searchQuery)
     }
     
+    func getEventsFor(lat: Double, lng: Double) {
+        let rawURL = "http://api.songkick.com/api/3.0/events.json?location=geo:\(lat),\(lng)&apikey=\(APIkey)"
+        var url: NSURL = NSURL(string: rawURL)
+        var request: NSURLRequest = NSURLRequest(URL: url)
+        self.eventsConnection = NSURLConnection(request: request, delegate: self,
+            startImmediately: true)
+        
+        println("pinging events API at \(url)")
+    }
+    
     func getMetroID(searchQuery: String) {
         var escapedSearchQuery: String? = searchQuery.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
         let rawURL = "http://api.songkick.com/api/3.0/search/locations.json?query=\(escapedSearchQuery!)&apikey=\(APIkey)"

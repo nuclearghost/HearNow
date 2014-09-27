@@ -98,7 +98,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
     }
     
-    //mark LocationSearchField: UITextFieldDelegate
+    //MARK: LocationSearchField: UITextFieldDelegate
     func textFieldDidEndEditing(textField: UITextField) {
         println("Text field did end. Text \(self.LocationSearchField.text)")
         api.getEventsFor(self.LocationSearchField.text)
@@ -110,7 +110,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         return true
     }
     
-    //mark SongkickAPI delegate
+    //MARK: SongkickAPI delegate
     func didRecieveResponse(results: NSDictionary) {
         let resultsPage = results["resultsPage"] as NSDictionary
         let resultsD = resultsPage["results"] as NSDictionary
@@ -158,6 +158,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
             var locationObj = locationArray.lastObject as CLLocation
             var coord = locationObj.coordinate
             
+            api.getEventsFor(coord.latitude, lng: coord.longitude)
             println(coord.latitude)
             println(coord.longitude)
         }

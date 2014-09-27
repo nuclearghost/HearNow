@@ -33,7 +33,6 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         
         LocationSearchField.delegate = self
         api.delegate = self;
-        api.getEventsFor("San Francisco")
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,10 +85,13 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Selected: \(indexPath.row)!")
-        //performSegueWithIdentifier("miaview", sender: self.view)
+        performSegueWithIdentifier("showDetail", sender: indexPath)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let indexPath = sender!.row as Int
+        let rowData = self.concerts[indexPath] as NSDictionary
+        (segue.destinationViewController as DetailViewController).detailItem = rowData
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,6 +101,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     //MARK: LocationSearchField: UITextFieldDelegate
     func textFieldDidEndEditing(textField: UITextField) {
         println("Text field did end. Text \(self.LocationSearchField.text)")
+        api.getEventsFor(self.LocationSearchField.text)
         self.LocationSearchField.resignFirstResponder()
     }
 

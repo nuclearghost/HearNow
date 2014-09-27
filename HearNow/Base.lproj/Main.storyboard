@@ -2,22 +2,55 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="QwE-xk-gfl">
             <objects>
                 <tableViewController id="YHt-Fq-K66" customClass="HomeViewController" customModule="HearNow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PkT-rg-eNJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="22" sectionFooterHeight="22" id="PkT-rg-eNJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0vo-dh-2iY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConcertCell" rowHeight="140" id="0vo-dh-2iY" customClass="ConcertCell" customModule="HearNow" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0vo-dh-2iY" id="p01-Zr-GZI">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-ut-yGR">
+                                            <rect key="frame" x="8" y="10" width="584" height="33"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Venue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdR-ZL-1F6">
+                                            <rect key="frame" x="8" y="112" width="283" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-a2-eB0">
+                                            <rect key="frame" x="439" y="111" width="153" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="top" secondItem="p01-Zr-GZI" secondAttribute="topMargin" constant="2" id="AZ4-Rf-ZRe"/>
+                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="CIv-Qb-azS"/>
+                                        <constraint firstItem="d1G-a2-eB0" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="h1N-1N-xNc"/>
+                                        <constraint firstItem="GdR-ZL-1F6" firstAttribute="leading" secondItem="p01-Zr-GZI" secondAttribute="leadingMargin" id="idm-Fe-qJJ"/>
+                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="leading" secondItem="p01-Zr-GZI" secondAttribute="leadingMargin" id="tUI-9B-6Ss"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artistLabel" destination="5BQ-ut-yGR" id="D1c-Ak-3qI"/>
+                                    <outlet property="dateLabel" destination="d1G-a2-eB0" id="495-c6-Kib"/>
+                                    <outlet property="venueLabel" destination="GdR-ZL-1F6" id="txn-ro-Hsk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,7 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2v-aO-3hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="848"/>
+            <point key="canvasLocation" x="1376" y="844"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K2m-6r-uip">

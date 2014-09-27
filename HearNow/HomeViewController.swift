@@ -33,9 +33,8 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         self.navigationController?.navigationBar.tintColor = self.UIColorFromRGB(0x1A2980)
         
         LocationSearchField.delegate = self
-        
-        api.delegate = self
-        api.pingSongkick()
+        api.delegate = self;
+        api.getEventsFor("San Francisco")
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

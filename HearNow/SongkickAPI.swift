@@ -14,22 +14,42 @@ protocol SongkickAPIProtocol {
 }
 
 class SongkickAPI: NSObject {
+    
+    let APIkey = "FdFuEuAG8tXwHfe9"
+    let metroID: String?
+    var locationConnection: NSURLConnection?
+    var eventsConnection: NSURLConnection?
+    
     var data: NSMutableData = NSMutableData()
     var delegate: SongkickAPIProtocol?
     
+    
     //Search SongKick
-    func pingSongkick() {
-        
-        let APIkey = "FdFuEuAG8tXwHfe9"
-        let rawURL = "http://api.songkick.com/api/3.0/metro_areas/26330/calendar.json?apikey=\(APIkey)"
+    
+    func getEventsFor(searchQuery: String) {
+        getMetroID(searchQuery)
+    }
+    
+    func getMetroID(searchQuery: String) {
+        var escapedSearchQuery: String? = searchQuery.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        let rawURL = "http://api.songkick.com/api/3.0/search/locations.json?query=\(escapedSearchQuery!)&apikey=\(APIkey)"
         var url: NSURL = NSURL(string: rawURL)
         var request: NSURLRequest = NSURLRequest(URL: url)
-        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self,
-            startImmediately: false)
+        self.locationConnection = NSURLConnection(request: request, delegate: self,
+            startImmediately: true)
         
-        println("pinging SongKick API at \(url)")
+        println("getting metro ID at \(url)")
+    
+    }
+
+    func getEventsData(metrodID: NSNumber) {
+        let rawURL = "http://api.songkick.com/api/3.0/metro_areas/\(metrodID)/calendar.json?apikey=\(APIkey)"
+        var url: NSURL = NSURL(string: rawURL)
+        var request: NSURLRequest = NSURLRequest(URL: url)
+        self.eventsConnection = NSURLConnection(request: request, delegate: self,
+            startImmediately: true)
         
-        connection.start()
+        println("pinging events API at \(url)")
     }
     
     //NSURLConnection delegate method
@@ -56,7 +76,17 @@ class SongkickAPI: NSObject {
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
             options:NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
         
-        delegate?.didRecieveResponse(jsonResult)
+        if connection == self.locationConnection {
+            let resultsPage = jsonResult["resultsPage"] as NSDictionary
+            let results = resultsPage["results"] as NSDictionary
+            let location = results["location"] as NSMutableArray
+            let firstLocation = location[0] as NSDictionary
+            let metroArea = firstLocation["metroArea"] as NSDictionary
+            let metroID = metroArea["id"] as NSNumber
+            self.getEventsData(metroID)
+        } else if connection == self.eventsConnection {
+            delegate?.didRecieveResponse(jsonResult)
+        }
     }
     
 }

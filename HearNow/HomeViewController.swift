@@ -9,13 +9,24 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UITableViewController, UITextFieldDelegate {
+class HomeViewController: UITableViewController, UITextFieldDelegate, SongkickAPIProtocol {
+    
+    var api: SongkickAPI = SongkickAPI()
 
     @IBOutlet weak var LocationSearchField: UITextField!
 
     @IBAction func LocationTapped(sender: AnyObject) {
         println("tapped")
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        api.delegate = self;
+        api.pingSongkick()
+    }
+
     
     func textFieldDidEndEditing(textField: UITextField) {
         println("Text field done. Text \(self.LocationSearchField.text)")
@@ -29,5 +40,10 @@ class HomeViewController: UITableViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         println("Text field done. Text \(self.LocationSearchField.text)")
         return true
+    }
+    
+    func didRecieveResponse(results: NSDictionary) {
+        // Store the results in our table data array
+        println(results)
     }
 }

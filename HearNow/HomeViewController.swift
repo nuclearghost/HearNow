@@ -22,9 +22,8 @@ class HomeViewController: UITableViewController, UITextFieldDelegate, SongkickAP
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         api.delegate = self;
-        api.pingSongkick()
+        api.getEventsFor("SanFrancisco")
     }
 
     
@@ -44,6 +43,6 @@ class HomeViewController: UITableViewController, UITextFieldDelegate, SongkickAP
     
     func didRecieveResponse(results: NSDictionary) {
         // Store the results in our table data array
-        println(results)
+       println(results)
     }
 }

@@ -8,16 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SongkickAPIProtocol {
+    
+    var api: SongkickAPI = SongkickAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        api.delegate = self;
+        api.pingSongkick()
     }
-
+    ;
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func didRecieveResponse(results: NSDictionary) {
+        // Store the results in our table data array
+        println(results)
     }
 
 

@@ -13,12 +13,12 @@ protocol SongkickAPIProtocol {
     func didRecieveResponse(results: NSDictionary)
 }
 
-class ITunesSearchAPI: NSObject {
+class SongkickAPI: NSObject {
     var data: NSMutableData = NSMutableData()
     var delegate: SongkickAPIProtocol?
     
     //Search SongKick
-    func searchItunesFor(searchTerm: String) {
+    func pingSongkick() {
         
         let APIkey = "FdFuEuAG8tXwHfe9"
         let rawURL = "http://api.songkick.com/api/3.0/metro_areas/26330/calendar.json?apikey=\(APIkey)"

@@ -10,11 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var detailItem: NSDictionary?
+    @IBOutlet weak var eventTitle: UILabel!
+    var detailItem: NSDictionary!
 
 
     override func viewDidLoad() {
         println(detailItem!["displayName"])
+        self.eventTitle.text = detailItem["displayName"] as NSString
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

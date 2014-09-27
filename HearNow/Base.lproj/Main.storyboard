@@ -110,15 +110,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail VIew" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQj-3C-TkH">
-                                <rect key="frame" x="190" y="129" width="286" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14n-DE-ZQ1">
+                                <rect key="frame" x="126" y="100" width="212" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="14n-DE-ZQ1" secondAttribute="centerX" constant="31" id="OA4-fe-Ec8"/>
+                            <constraint firstAttribute="centerY" secondItem="14n-DE-ZQ1" secondAttribute="centerY" constant="189.5" id="PgA-yE-5Ve"/>
+                            <constraint firstItem="14n-DE-ZQ1" firstAttribute="width" secondItem="exk-V2-6zg" secondAttribute="width" id="Qx1-Vv-iPv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eventTitle" destination="14n-DE-ZQ1" id="0lg-CE-z2A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srl-DT-AZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

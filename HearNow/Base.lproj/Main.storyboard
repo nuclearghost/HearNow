@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -9,17 +9,17 @@
         <scene sceneID="QwE-xk-gfl">
             <objects>
                 <tableViewController id="YHt-Fq-K66" customClass="HomeViewController" customModule="HearNow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="141" sectionHeaderHeight="22" sectionFooterHeight="22" id="PkT-rg-eNJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="22" sectionFooterHeight="22" id="PkT-rg-eNJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConcertCell" rowHeight="200" id="0vo-dh-2iY" customClass="ConcertCell" customModule="HearNow" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConcertCell" rowHeight="101" id="0vo-dh-2iY" customClass="ConcertCell" customModule="HearNow" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0vo-dh-2iY" id="p01-Zr-GZI">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-ut-yGR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-ut-yGR">
                                             <rect key="frame" x="8" y="11" width="584" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -31,6 +31,9 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Microphone" translatesAutoresizingMaskIntoConstraints="NO" id="GOU-Qy-Uys">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-a2-eB0">
                                             <rect key="frame" x="439" y="111" width="153" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -39,33 +42,56 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="top" secondItem="p01-Zr-GZI" secondAttribute="topMargin" constant="2" id="AZ4-Rf-ZRe"/>
-                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="CIv-Qb-azS"/>
-                                        <constraint firstItem="d1G-a2-eB0" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="h1N-1N-xNc"/>
-                                        <constraint firstItem="GdR-ZL-1F6" firstAttribute="leading" secondItem="p01-Zr-GZI" secondAttribute="leadingMargin" id="idm-Fe-qJJ"/>
-                                        <constraint firstItem="GdR-ZL-1F6" firstAttribute="bottom" secondItem="p01-Zr-GZI" secondAttribute="bottomMargin" id="k4L-D4-ObH"/>
-                                        <constraint firstItem="d1G-a2-eB0" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="oTB-a2-9Zn"/>
-                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="leading" secondItem="p01-Zr-GZI" secondAttribute="leadingMargin" id="tUI-9B-6Ss"/>
-                                        <constraint firstItem="d1G-a2-eB0" firstAttribute="bottom" secondItem="p01-Zr-GZI" secondAttribute="bottomMargin" id="vjB-u8-e3U"/>
+                                        <constraint firstItem="GOU-Qy-Uys" firstAttribute="leading" secondItem="p01-Zr-GZI" secondAttribute="leadingMargin" id="9U8-qG-baw"/>
+                                        <constraint firstItem="d1G-a2-eB0" firstAttribute="trailing" secondItem="p01-Zr-GZI" secondAttribute="trailingMargin" id="E7A-fT-6lW"/>
+                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="leading" secondItem="GOU-Qy-Uys" secondAttribute="trailing" constant="8" id="FzZ-7N-mgR"/>
+                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="leading" secondItem="GOU-Qy-Uys" secondAttribute="trailing" constant="8" id="KUN-t6-hHz"/>
+                                        <constraint firstItem="GOU-Qy-Uys" firstAttribute="top" secondItem="p01-Zr-GZI" secondAttribute="topMargin" constant="1" id="LmG-jR-rqB"/>
+                                        <constraint firstItem="GdR-ZL-1F6" firstAttribute="top" secondItem="GOU-Qy-Uys" secondAttribute="bottom" constant="8" id="Npn-AS-m4O"/>
+                                        <constraint firstItem="GdR-ZL-1F6" firstAttribute="baseline" secondItem="d1G-a2-eB0" secondAttribute="baseline" id="Qed-pO-XVN"/>
+                                        <constraint firstItem="GdR-ZL-1F6" firstAttribute="leading" secondItem="GOU-Qy-Uys" secondAttribute="leading" id="TfA-1t-yP0"/>
+                                        <constraint firstItem="5BQ-ut-yGR" firstAttribute="top" secondItem="p01-Zr-GZI" secondAttribute="topMargin" constant="2" id="WsV-1D-gx6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5BQ-ut-yGR" secondAttribute="trailing" constant="14" id="nfr-Vj-Afa"/>
                                     </constraints>
                                     <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="GOU-Qy-Uys"/>
+                                        </mask>
                                         <mask key="constraints">
-                                            <exclude reference="k4L-D4-ObH"/>
-                                            <exclude reference="oTB-a2-9Zn"/>
-                                            <exclude reference="vjB-u8-e3U"/>
+                                            <exclude reference="9U8-qG-baw"/>
+                                            <exclude reference="LmG-jR-rqB"/>
+                                            <exclude reference="FzZ-7N-mgR"/>
+                                            <exclude reference="KUN-t6-hHz"/>
+                                            <exclude reference="WsV-1D-gx6"/>
+                                            <exclude reference="nfr-Vj-Afa"/>
+                                            <exclude reference="Npn-AS-m4O"/>
+                                            <exclude reference="Qed-pO-XVN"/>
+                                            <exclude reference="TfA-1t-yP0"/>
+                                            <exclude reference="E7A-fT-6lW"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular">
+                                        <mask key="subviews">
+                                            <include reference="GOU-Qy-Uys"/>
+                                        </mask>
                                         <mask key="constraints">
-                                            <include reference="k4L-D4-ObH"/>
-                                            <include reference="oTB-a2-9Zn"/>
-                                            <include reference="vjB-u8-e3U"/>
+                                            <include reference="9U8-qG-baw"/>
+                                            <include reference="LmG-jR-rqB"/>
+                                            <include reference="FzZ-7N-mgR"/>
+                                            <include reference="KUN-t6-hHz"/>
+                                            <include reference="WsV-1D-gx6"/>
+                                            <include reference="nfr-Vj-Afa"/>
+                                            <include reference="Npn-AS-m4O"/>
+                                            <include reference="Qed-pO-XVN"/>
+                                            <include reference="TfA-1t-yP0"/>
+                                            <include reference="E7A-fT-6lW"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="artistLabel" destination="5BQ-ut-yGR" id="D1c-Ak-3qI"/>
                                     <outlet property="dateLabel" destination="d1G-a2-eB0" id="495-c6-Kib"/>
+                                    <outlet property="imgView" destination="GOU-Qy-Uys" id="fwl-rj-Cmg"/>
                                     <outlet property="venueLabel" destination="GdR-ZL-1F6" id="txn-ro-Hsk"/>
                                 </connections>
                             </tableViewCell>
@@ -96,7 +122,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2v-aO-3hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="844"/>
+            <point key="canvasLocation" x="1376" y="840.75"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="3Ix-BK-mWX">
@@ -183,6 +209,7 @@
     </scenes>
     <resources>
         <image name="Location" width="26" height="25"/>
+        <image name="Microphone" width="50" height="50"/>
         <image name="Search" width="25" height="25"/>
     </resources>
 </document>

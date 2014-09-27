@@ -24,7 +24,6 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         LocationSearchField.delegate = self
         api.delegate = self;
-        api.getEventsFor("San Francisco")
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,6 +90,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     //mark LocationSearchField: UITextFieldDelegate
     func textFieldDidEndEditing(textField: UITextField) {
         println("Text field did end. Text \(self.LocationSearchField.text)")
+        api.getEventsFor(self.LocationSearchField.text)
         self.LocationSearchField.resignFirstResponder()
     }
 

@@ -18,12 +18,11 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     var locationManager: CLLocationManager!
     var seenError : Bool = false
     var locationFixAchieved : Bool = false
-    var locationStatus : NSString = "Not Started"
 
     @IBOutlet weak var LocationSearchField: UITextField!
 
     @IBAction func LocationTapped(sender: AnyObject) {
-        println("tapped")
+        self.initLocationManager()
     }
     
     override func viewDidLoad() {
@@ -110,7 +109,6 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     
     //mark SongkickAPI delegate
     func didRecieveResponse(results: NSDictionary) {
-        //println(results)
         let resultsPage = results["resultsPage"] as NSDictionary
         let resultsD = resultsPage["results"] as NSDictionary
         let events = resultsD["event"] as NSArray
@@ -133,7 +131,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         locationFixAchieved = false
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         
         locationManager.requestWhenInUseAuthorization()
     }
@@ -166,6 +164,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     func locationManager(manager: CLLocationManager!,
         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
             var shouldIAllow = false
+            var locationStatus: String
             
             switch status {
             case CLAuthorizationStatus.Restricted:
@@ -178,7 +177,6 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
                 locationStatus = "Allowed to location Access"
                 shouldIAllow = true
             }
-            NSNotificationCenter.defaultCenter().postNotificationName("LabelHasbeenUpdated", object: nil)
             if (shouldIAllow == true) {
                 NSLog("Location to Allowed")
                 // Start location services

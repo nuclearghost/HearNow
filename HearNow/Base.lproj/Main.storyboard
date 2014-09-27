@@ -136,27 +136,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14n-DE-ZQ1">
-                                <rect key="frame" x="126" y="100" width="212" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-WS-CtM">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="96" width="600" height="66"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufo-mT-DFm">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="251" width="201" height="66"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQf-PS-RPb">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="177" width="201" height="66"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="14n-DE-ZQ1" secondAttribute="centerX" constant="31" id="OA4-fe-Ec8"/>
-                            <constraint firstAttribute="centerY" secondItem="14n-DE-ZQ1" secondAttribute="centerY" constant="189.5" id="PgA-yE-5Ve"/>
-                            <constraint firstItem="14n-DE-ZQ1" firstAttribute="width" secondItem="exk-V2-6zg" secondAttribute="width" id="Qx1-Vv-iPv"/>
-                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ckO-WS-CtM"/>
+                                <exclude reference="ufo-mT-DFm"/>
+                                <exclude reference="nQf-PS-RPb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="ckO-WS-CtM"/>
+                                <include reference="ufo-mT-DFm"/>
+                                <include reference="nQf-PS-RPb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="eventTitle" destination="14n-DE-ZQ1" id="0lg-CE-z2A"/>
+                        <outlet property="eventDate" destination="ufo-mT-DFm" id="wao-bI-fON"/>
+                        <outlet property="eventTitle" destination="ckO-WS-CtM" id="ZzJ-ix-AX7"/>
+                        <outlet property="venueName" destination="nQf-PS-RPb" id="3Fs-uU-0fm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srl-DT-AZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2132" y="844"/>
+            <point key="canvasLocation" x="2123" y="813.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K2m-6r-uip">

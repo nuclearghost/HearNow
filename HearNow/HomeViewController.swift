@@ -86,10 +86,13 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Selected: \(indexPath.row)!")
-        //performSegueWithIdentifier("miaview", sender: self.view)
+        performSegueWithIdentifier("showDetail", sender: indexPath)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let indexPath = sender!.row as Int
+        let rowData = self.concerts[indexPath] as NSDictionary
+        (segue.destinationViewController as DetailViewController).detailItem = rowData
     }
     
     override func didReceiveMemoryWarning() {

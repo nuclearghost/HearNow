@@ -41,7 +41,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="LocationSearchField" destination="zbM-tj-DKy" id="yVD-69-ySw"/>
-                        <outlet property="locationSearchBox" destination="Xiq-fP-3Hq" id="9s2-kT-VEy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2v-aO-3hU" userLabel="First Responder" sceneMemberID="firstResponder"/>

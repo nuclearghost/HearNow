@@ -36,6 +36,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         LocationSearchField.delegate = self
         api.delegate = self;
         lastFMApi.delegate = self;
+        api.getEventsForClientIP()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

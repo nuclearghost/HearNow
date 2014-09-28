@@ -149,7 +149,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-WS-CtM">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LyX-hG-dBZ">
@@ -176,7 +176,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="wkA-aa-6tf"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Find Out More">
+                                    <color key="titleColor" red="0.8229904361872038" green="0.88235294117647056" blue="0.6412350137990106" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -194,7 +196,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12156862745098039" green="0.4392156862745098" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LyX-hG-dBZ" secondAttribute="trailing" constant="-16" id="5Rh-qa-nsn"/>
                             <constraint firstItem="leL-aV-HXu" firstAttribute="top" secondItem="ckO-WS-CtM" secondAttribute="bottom" constant="8" symbolic="YES" id="7am-D0-USj"/>
@@ -264,6 +266,7 @@
                     </view>
                     <connections>
                         <outlet property="eventTitle" destination="ckO-WS-CtM" id="ZzJ-ix-AX7"/>
+                        <outlet property="imgView" destination="Dmj-dY-yFo" id="0kL-su-0W2"/>
                         <outlet property="mapView" destination="LyX-hG-dBZ" id="Ksr-2V-cpC"/>
                     </connections>
                 </viewController>

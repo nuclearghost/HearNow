@@ -10,13 +10,10 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class HomeViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate, SongkickAPIProtocol, LastFMAPIProtocol {
+class HomeViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate, SongkickAPIProtocol {
     
     var api: SongkickAPI = SongkickAPI()
     var concerts: NSArray = NSArray()
-    
-    var lastFMApi: LastFMAPI = LastFMAPI()
-    
     var locationManager: CLLocationManager!
     var seenError : Bool = false
     var locationFixAchieved : Bool = false
@@ -35,7 +32,6 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         
         LocationSearchField.delegate = self
         api.delegate = self;
-        lastFMApi.delegate = self;
         api.getEventsForClientIP()
     }
     

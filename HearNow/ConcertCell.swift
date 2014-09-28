@@ -15,4 +15,9 @@ class ConcertCell : UITableViewCell {
     @IBOutlet weak var venueLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imgView: UIImageView!
+    
+    override func awakeFromNib() {
+        //self.imgView.layer.cornerRadius = self.imgView.frame.size.width/2;
+        //self.imgView.clipsToBounds = true;
+    }
 }

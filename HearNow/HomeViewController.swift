@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class HomeViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate, SongkickAPIProtocol {
+class HomeViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate, SongkickAPIProtocol, LastFMAPIProtocol {
     
     var api: SongkickAPI = SongkickAPI()
     var concerts: NSArray = NSArray()
+    
+    var lastFMApi: LastFMAPI = LastFMAPI()
     
     var locationManager: CLLocationManager!
     var seenError : Bool = false
@@ -33,6 +35,7 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         
         LocationSearchField.delegate = self
         api.delegate = self;
+        lastFMApi.delegate = self;
         api.getEventsForClientIP()
     }
     
@@ -51,6 +54,12 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         
         let venue = rowData["venue"] as NSDictionary
         cell.venueLabel.text = venue["displayName"] as NSString
+        
+        /*
+        let performance = rowData["performance"] as NSArray
+        let artist = performance[0] as NSDictionary
+        lastFMApi.findArtist(artist["displayName"] as String)
+        */
         /*
         var imageUrl = NSURL(string: image)
         var request = NSURLRequest(URL: imageUrl)
@@ -118,6 +127,10 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         let events = resultsD["event"] as NSArray
         self.concerts = events;
         tableView.reloadData()
+    }
+    
+    func didRecieveArtistResponse(results: NSDictionary) {
+        println()
     }
     
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {

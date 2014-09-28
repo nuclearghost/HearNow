@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -23,7 +23,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-ut-yGR">
                                             <rect key="frame" x="8" y="11" width="584" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular" misplaced="YES">
                                                 <rect key="frame" x="42" y="10" width="536" height="20.5"/>
@@ -32,7 +32,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Venue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdR-ZL-1F6">
                                             <rect key="frame" x="8" y="112" width="283" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular" misplaced="YES">
                                                 <rect key="frame" x="8" y="42" width="47" height="20.5"/>
@@ -44,7 +44,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-a2-eB0">
                                             <rect key="frame" x="439" y="111" width="153" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular" misplaced="YES">
                                                 <rect key="frame" x="556" y="42" width="36" height="20.5"/>
@@ -98,6 +98,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12156862745098039" green="0.4392156862745098" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="artistLabel" destination="5BQ-ut-yGR" id="D1c-Ak-3qI"/>
                                     <outlet property="dateLabel" destination="d1G-a2-eB0" id="495-c6-Kib"/>
@@ -223,20 +224,20 @@
                                 <exclude reference="leL-aV-HXu"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="EhZ-9I-zSA"/>
-                                <exclude reference="ODx-k3-lZ5"/>
-                                <exclude reference="UwX-pd-joJ"/>
                                 <exclude reference="IYP-uZ-Xae"/>
                                 <exclude reference="SKh-vt-zqf"/>
                                 <exclude reference="yZd-2L-Hb1"/>
+                                <exclude reference="XTO-df-jz1"/>
                                 <exclude reference="7am-D0-USj"/>
                                 <exclude reference="BpU-oC-xXC"/>
                                 <exclude reference="DJt-uW-pv3"/>
                                 <exclude reference="Qc0-37-BnI"/>
                                 <exclude reference="i2z-C5-uTv"/>
+                                <exclude reference="EhZ-9I-zSA"/>
+                                <exclude reference="ODx-k3-lZ5"/>
+                                <exclude reference="UwX-pd-joJ"/>
                                 <exclude reference="5Rh-qa-nsn"/>
                                 <exclude reference="SbI-AB-Tju"/>
-                                <exclude reference="XTO-df-jz1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -247,20 +248,20 @@
                                 <include reference="leL-aV-HXu"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="EhZ-9I-zSA"/>
-                                <include reference="ODx-k3-lZ5"/>
-                                <include reference="UwX-pd-joJ"/>
                                 <include reference="IYP-uZ-Xae"/>
                                 <include reference="SKh-vt-zqf"/>
                                 <include reference="yZd-2L-Hb1"/>
+                                <include reference="XTO-df-jz1"/>
                                 <include reference="7am-D0-USj"/>
                                 <include reference="BpU-oC-xXC"/>
                                 <include reference="DJt-uW-pv3"/>
                                 <include reference="Qc0-37-BnI"/>
                                 <include reference="i2z-C5-uTv"/>
+                                <include reference="EhZ-9I-zSA"/>
+                                <include reference="ODx-k3-lZ5"/>
+                                <include reference="UwX-pd-joJ"/>
                                 <include reference="5Rh-qa-nsn"/>
                                 <include reference="SbI-AB-Tju"/>
-                                <include reference="XTO-df-jz1"/>
                             </mask>
                         </variation>
                     </view>

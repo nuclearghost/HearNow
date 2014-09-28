@@ -53,6 +53,7 @@ class DetailViewController: UIViewController {
         annotation.coordinate = location
         annotation.title = venue["displayName"] as String
         self.mapView.addAnnotation(annotation)
+        self.mapView.selectAnnotation(annotation, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

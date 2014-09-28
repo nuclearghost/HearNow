@@ -42,13 +42,21 @@ class DetailViewController: UIViewController {
     }
     
     func initMap() {
-        let location = CLLocationCoordinate2D(latitude: 22, longitude: -122)
+        let venue = detailItem["venue"] as NSDictionary
+        let lat = venue["lat"] as Double
+        let lng = venue["lng"] as Double
+        let location = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         self.mapView.centerCoordinate = location;
+        self.mapView.camera = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: location, eyeAltitude: 3000)
+        
+        var annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = venue["displayName"] as String
+        self.mapView.addAnnotation(annotation)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

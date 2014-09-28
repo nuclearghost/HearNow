@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -63,7 +62,6 @@
                                         <constraint firstItem="5BQ-ut-yGR" firstAttribute="top" secondItem="p01-Zr-GZI" secondAttribute="topMargin" constant="2" id="WsV-1D-gx6"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="5BQ-ut-yGR" secondAttribute="trailing" constant="14" id="nfr-Vj-Afa"/>
                                     </constraints>
-                                    <variation key="heightClass=regular"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.12156862745098039" green="0.4392156862745098" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -132,6 +130,9 @@
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Guitar" translatesAutoresizingMaskIntoConstraints="NO" id="Dmj-dY-yFo">
                                 <rect key="frame" x="0.0" y="64" width="600" height="120"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="600" height="189"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leL-aV-HXu">
                                 <rect key="frame" x="16" y="223" width="568" height="44"/>
@@ -162,6 +163,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="261" width="568" height="23"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.4392156862745098" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
@@ -191,7 +195,6 @@
                                 <exclude reference="JTI-Tr-2hU"/>
                             </mask>
                         </variation>
-                        <variation key="heightClass=regular"/>
                     </view>
                     <connections>
                         <outlet property="eventTitle" destination="ckO-WS-CtM" id="ZzJ-ix-AX7"/>

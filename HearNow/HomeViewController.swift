@@ -45,8 +45,12 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         let rowData = self.concerts[indexPath.row] as NSDictionary
         let displayName = rowData["displayName"] as NSString
         let displayNameAsString = String(displayName)
-        let index = displayNameAsString.rangeOfString("at")?.startIndex
-        cell.artistLabel.text = displayNameAsString.substringToIndex(index!)
+        
+        if let index = displayNameAsString.rangeOfString("at") {
+            cell.artistLabel.text = displayNameAsString.substringToIndex(index.startIndex)
+        } else {
+            cell.artistLabel.text = displayNameAsString
+        }
         
         let start = rowData["start"] as NSDictionary
         cell.dateLabel.text = start["date"] as NSString

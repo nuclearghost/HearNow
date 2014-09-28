@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0vo-dh-2iY" id="p01-Zr-GZI">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-ut-yGR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-ut-yGR">
                                             <rect key="frame" x="8" y="11" width="584" height="33"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -58,8 +59,6 @@
                                             <exclude reference="GOU-Qy-Uys"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="9U8-qG-baw"/>
-                                            <exclude reference="LmG-jR-rqB"/>
                                             <exclude reference="FzZ-7N-mgR"/>
                                             <exclude reference="KUN-t6-hHz"/>
                                             <exclude reference="WsV-1D-gx6"/>
@@ -67,6 +66,8 @@
                                             <exclude reference="Npn-AS-m4O"/>
                                             <exclude reference="Qed-pO-XVN"/>
                                             <exclude reference="TfA-1t-yP0"/>
+                                            <exclude reference="9U8-qG-baw"/>
+                                            <exclude reference="LmG-jR-rqB"/>
                                             <exclude reference="E7A-fT-6lW"/>
                                         </mask>
                                     </variation>
@@ -75,8 +76,6 @@
                                             <include reference="GOU-Qy-Uys"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="9U8-qG-baw"/>
-                                            <include reference="LmG-jR-rqB"/>
                                             <include reference="FzZ-7N-mgR"/>
                                             <include reference="KUN-t6-hHz"/>
                                             <include reference="WsV-1D-gx6"/>
@@ -84,6 +83,8 @@
                                             <include reference="Npn-AS-m4O"/>
                                             <include reference="Qed-pO-XVN"/>
                                             <include reference="TfA-1t-yP0"/>
+                                            <include reference="9U8-qG-baw"/>
+                                            <include reference="LmG-jR-rqB"/>
                                             <include reference="E7A-fT-6lW"/>
                                         </mask>
                                     </variation>

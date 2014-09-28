@@ -19,15 +19,17 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         println(detailItem)
         self.eventTitle.text = detailItem["displayName"] as String
-        let venue = detailItem["venue"] as NSDictionary
-        self.venueName.text = venue["displayName"] as String
-        let start = detailItem["start"] as NSDictionary
-        self.eventDate.text = start["date"] as String
         self.setTitleWithArtistDisplayName()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let eventURL = detailItem["uri"]
+        (segue.destinationViewController as WebViewController).eventURL = eventURL as String
+    }
+
     
     func setTitleWithArtistDisplayName() {
         let performances = detailItem["performance"] as NSMutableArray

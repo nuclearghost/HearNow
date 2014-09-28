@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		94F8556019D7424200595CF6 /* SongkickAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8555F19D7424200595CF6 /* SongkickAPI.swift */; };
 		94F8556219D767B000595CF6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8556119D767B000595CF6 /* DetailViewController.swift */; };
+		94F8556419D782BF00595CF6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8556319D782BF00595CF6 /* WebViewController.swift */; };
 		F32535AC19D7507E0098EE5F /* ConcertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32535AB19D7507E0098EE5F /* ConcertCell.swift */; };
 		F35DB10D19D7763800C4DD31 /* LastFMAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DB10C19D7763800C4DD31 /* LastFMAPI.swift */; };
 		F3BCBF4519D73EA3002F0A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BCBF4419D73EA3002F0A58 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		94F8555F19D7424200595CF6 /* SongkickAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongkickAPI.swift; sourceTree = "<group>"; };
 		94F8556119D767B000595CF6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		94F8556319D782BF00595CF6 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F32535AB19D7507E0098EE5F /* ConcertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertCell.swift; sourceTree = "<group>"; };
 		F35DB10C19D7763800C4DD31 /* LastFMAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastFMAPI.swift; sourceTree = "<group>"; };
 		F3BCBF3F19D73EA3002F0A58 /* HearNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HearNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 				F3BCBF4419D73EA3002F0A58 /* AppDelegate.swift */,
 				F3BCBF4619D73EA3002F0A58 /* ViewController.swift */,
 				F3BCBF4819D73EA3002F0A58 /* Main.storyboard */,
+				94F8556319D782BF00595CF6 /* WebViewController.swift */,
 				94F8556119D767B000595CF6 /* DetailViewController.swift */,
 				F3BCBF6419D74331002F0A58 /* HomeViewController.swift */,
 				F32535AB19D7507E0098EE5F /* ConcertCell.swift */,
@@ -234,6 +237,7 @@
 				F35DB10D19D7763800C4DD31 /* LastFMAPI.swift in Sources */,
 				94F8556019D7424200595CF6 /* SongkickAPI.swift in Sources */,
 				F3BCBF6519D74331002F0A58 /* HomeViewController.swift in Sources */,
+				94F8556419D782BF00595CF6 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

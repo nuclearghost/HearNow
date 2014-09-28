@@ -43,7 +43,10 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         var cell: ConcertCell! = self.tableView.dequeueReusableCellWithIdentifier("ConcertCell" ,forIndexPath: indexPath) as ConcertCell
         
         let rowData = self.concerts[indexPath.row] as NSDictionary
-        cell.artistLabel.text = rowData["displayName"] as NSString
+        let displayName = rowData["displayName"] as NSString
+        let displayNameAsString = String(displayName)
+        let index = displayNameAsString.rangeOfString("at")?.startIndex
+        cell.artistLabel.text = displayNameAsString.substringToIndex(index!)
         
         let start = rowData["start"] as NSDictionary
         cell.dateLabel.text = start["date"] as NSString

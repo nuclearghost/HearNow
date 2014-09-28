@@ -122,7 +122,8 @@
                                         <exclude reference="MGg-Io-eo0"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular">
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="1" y="406" width="600" height="394"/>
                                     <mask key="constraints">
                                         <include reference="MGg-Io-eo0"/>
                                     </mask>

@@ -60,6 +60,8 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         
         cell.imgView.layer.cornerRadius = cell.imgView.frame.size.width/2;
         cell.imgView.clipsToBounds = true;
+        cell.imgView.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.imgView.layer.borderWidth = 2
 
         /*
         let performance = rowData["performance"] as NSArray

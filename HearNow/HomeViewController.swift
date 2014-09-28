@@ -55,6 +55,9 @@ class HomeViewController: UITableViewController, UITableViewDelegate, UITableVie
         let venue = rowData["venue"] as NSDictionary
         cell.venueLabel.text = venue["displayName"] as NSString
         
+        cell.imgView.layer.cornerRadius = cell.imgView.frame.size.width/2;
+        cell.imgView.clipsToBounds = true;
+
         /*
         let performance = rowData["performance"] as NSArray
         let artist = performance[0] as NSDictionary

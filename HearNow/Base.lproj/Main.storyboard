@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lb1-p5-blv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -40,9 +40,6 @@
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Microphone" translatesAutoresizingMaskIntoConstraints="NO" id="GOU-Qy-Uys">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <variation key="heightClass=regular" misplaced="YES">
-                                                <rect key="frame" x="8" y="9" width="26" height="25"/>
-                                            </variation>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1G-a2-eB0">
                                             <rect key="frame" x="439" y="111" width="153" height="21"/>
@@ -149,68 +146,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leL-aV-HXu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Find Out More">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="425" width="568" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="cQj-xn-hYW" kind="show" identifier="showWebView" id="8Jw-Yh-eqB"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LyX-hG-dBZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="553" width="600" height="247"/>
+                                </variation>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Guitar" translatesAutoresizingMaskIntoConstraints="NO" id="Dmj-dY-yFo">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="600" height="252"/>
+                                </variation>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-WS-CtM">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="16" y="94" width="568" height="100.5"/>
+                                    <rect key="frame" x="16" y="324" width="568" height="23"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leL-aV-HXu">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Go to Event Page">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="16" y="288" width="568" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="cQj-xn-hYW" kind="show" identifier="showWebView" id="8Jw-Yh-eqB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="leL-aV-HXu" firstAttribute="trailing" secondItem="exk-V2-6zg" secondAttribute="trailingMargin" id="0b5-O6-Htc"/>
-                            <constraint firstItem="ckO-WS-CtM" firstAttribute="trailing" secondItem="exk-V2-6zg" secondAttribute="trailingMargin" id="KPI-yu-wph"/>
-                            <constraint firstItem="ckO-WS-CtM" firstAttribute="top" secondItem="S5D-Nc-ZUl" secondAttribute="bottom" constant="32" id="S7A-us-ELY"/>
-                            <constraint firstItem="leL-aV-HXu" firstAttribute="top" secondItem="ckO-WS-CtM" secondAttribute="bottom" constant="93.5" id="iW1-6o-NBY"/>
-                            <constraint firstItem="leL-aV-HXu" firstAttribute="leading" secondItem="exk-V2-6zg" secondAttribute="leadingMargin" id="nRE-oK-gkE"/>
-                            <constraint firstItem="ckO-WS-CtM" firstAttribute="leading" secondItem="exk-V2-6zg" secondAttribute="leadingMargin" id="sl6-jT-lJf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LyX-hG-dBZ" secondAttribute="trailing" constant="-16" id="5Rh-qa-nsn"/>
+                            <constraint firstItem="leL-aV-HXu" firstAttribute="trailing" secondItem="exk-V2-6zg" secondAttribute="trailingMargin" id="CRQ-gi-NQ8"/>
+                            <constraint firstItem="Dmj-dY-yFo" firstAttribute="leading" secondItem="exk-V2-6zg" secondAttribute="leadingMargin" constant="-16" id="EhZ-9I-zSA"/>
+                            <constraint firstItem="ckO-WS-CtM" firstAttribute="trailing" secondItem="exk-V2-6zg" secondAttribute="trailingMargin" id="IYP-uZ-Xae"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dmj-dY-yFo" secondAttribute="trailing" constant="-16" id="ODx-k3-lZ5"/>
+                            <constraint firstItem="ckO-WS-CtM" firstAttribute="top" secondItem="Dmj-dY-yFo" secondAttribute="bottom" constant="8" id="SKh-vt-zqf"/>
+                            <constraint firstItem="LyX-hG-dBZ" firstAttribute="leading" secondItem="exk-V2-6zg" secondAttribute="leadingMargin" constant="-16" id="SbI-AB-Tju"/>
+                            <constraint firstItem="Dmj-dY-yFo" firstAttribute="top" secondItem="S5D-Nc-ZUl" secondAttribute="bottom" id="UwX-pd-joJ"/>
+                            <constraint firstItem="fhh-X4-slC" firstAttribute="top" secondItem="LyX-hG-dBZ" secondAttribute="bottom" id="XTO-df-jz1"/>
+                            <constraint firstItem="leL-aV-HXu" firstAttribute="leading" secondItem="exk-V2-6zg" secondAttribute="leadingMargin" id="qrD-Mb-dan"/>
+                            <constraint firstItem="ckO-WS-CtM" firstAttribute="leading" secondItem="exk-V2-6zg" secondAttribute="leadingMargin" id="yZd-2L-Hb1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="ckO-WS-CtM"/>
                                 <exclude reference="leL-aV-HXu"/>
+                                <exclude reference="LyX-hG-dBZ"/>
+                                <exclude reference="Dmj-dY-yFo"/>
+                                <exclude reference="ckO-WS-CtM"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KPI-yu-wph"/>
-                                <exclude reference="S7A-us-ELY"/>
-                                <exclude reference="sl6-jT-lJf"/>
-                                <exclude reference="0b5-O6-Htc"/>
-                                <exclude reference="iW1-6o-NBY"/>
-                                <exclude reference="nRE-oK-gkE"/>
+                                <exclude reference="EhZ-9I-zSA"/>
+                                <exclude reference="ODx-k3-lZ5"/>
+                                <exclude reference="UwX-pd-joJ"/>
+                                <exclude reference="IYP-uZ-Xae"/>
+                                <exclude reference="SKh-vt-zqf"/>
+                                <exclude reference="yZd-2L-Hb1"/>
+                                <exclude reference="CRQ-gi-NQ8"/>
+                                <exclude reference="qrD-Mb-dan"/>
+                                <exclude reference="5Rh-qa-nsn"/>
+                                <exclude reference="SbI-AB-Tju"/>
+                                <exclude reference="XTO-df-jz1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="ckO-WS-CtM"/>
                                 <include reference="leL-aV-HXu"/>
+                                <include reference="LyX-hG-dBZ"/>
+                                <include reference="Dmj-dY-yFo"/>
+                                <include reference="ckO-WS-CtM"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="KPI-yu-wph"/>
-                                <include reference="S7A-us-ELY"/>
-                                <include reference="sl6-jT-lJf"/>
-                                <include reference="0b5-O6-Htc"/>
-                                <include reference="iW1-6o-NBY"/>
-                                <include reference="nRE-oK-gkE"/>
+                                <include reference="EhZ-9I-zSA"/>
+                                <include reference="ODx-k3-lZ5"/>
+                                <include reference="UwX-pd-joJ"/>
+                                <include reference="IYP-uZ-Xae"/>
+                                <include reference="SKh-vt-zqf"/>
+                                <include reference="yZd-2L-Hb1"/>
+                                <include reference="CRQ-gi-NQ8"/>
+                                <include reference="qrD-Mb-dan"/>
+                                <include reference="5Rh-qa-nsn"/>
+                                <include reference="SbI-AB-Tju"/>
+                                <include reference="XTO-df-jz1"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="eventTitle" destination="ckO-WS-CtM" id="ZzJ-ix-AX7"/>
+                        <outlet property="mapView" destination="LyX-hG-dBZ" id="Ksr-2V-cpC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srl-DT-AZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,6 +255,7 @@
                         <viewControllerLayoutGuide type="bottom" id="X2i-Lv-VEf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LXl-aA-FeW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -255,6 +285,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Guitar" width="283" height="189"/>
         <image name="Location" width="26" height="25"/>
         <image name="Microphone" width="50" height="50"/>
         <image name="Search" width="25" height="25"/>

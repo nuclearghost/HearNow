@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailViewController: UIViewController {
     
@@ -15,19 +16,20 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var venueName: UILabel!
     @IBOutlet weak var eventDate: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
-        println(detailItem)
-        self.eventTitle.text = detailItem["displayName"] as String
-        self.setTitleWithArtistDisplayName()
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        println(detailItem)
+        self.eventTitle.text = detailItem["displayName"] as? String
+        self.setTitleWithArtistDisplayName()
+        self.initMap()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let eventURL = detailItem["uri"]
-        (segue.destinationViewController as WebViewController).eventURL = eventURL as String
+        let eventURL: AnyObject? = detailItem["uri"]
+        (segue.destinationViewController as WebViewController).eventURL = eventURL as? String
     }
 
     
@@ -37,6 +39,11 @@ class DetailViewController: UIViewController {
         let artist = performance["artist"] as NSDictionary
         let displayName = artist["displayName"] as String
         self.title = displayName
+    }
+    
+    func initMap() {
+        let location = CLLocationCoordinate2D(latitude: 22, longitude: -122)
+        self.mapView.centerCoordinate = location;
     }
 
     override func didReceiveMemoryWarning() {
